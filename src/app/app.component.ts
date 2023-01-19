@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Cocktail } from 'src/models/cocktail';
+import { NombreIngrediente } from 'src/models/ingrediente';
+import { listaCocktails } from 'src/models/listaCocktails';
+import { listaIngredientes } from 'src/models/listaIngredientes';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'lista-cocktails';
+
+  public listaCocktails: Cocktail[] = listaCocktails;
+  public listaIngredientes: { nombre: NombreIngrediente, isAlcohol: boolean, checked: boolean }[] = listaIngredientes;
+
+  ngOnInit() {
+    console.log('hola');
+  }
+
+  abrirReceta(link: string) {
+    window.open(link, "_blank");
+  }
+
+  seleccionIngrediente(checked: boolean, nombre: string) {
+    console.log(checked, nombre);
+  }
 }
