@@ -1,9 +1,9 @@
 import { Ingrediente } from "./ingrediente";
 
 export interface Cocktail {
-    nombre: NombreCocktail,
+    nombre: string,
     ingredientes: Ingrediente[],
     link: string
 }
 
-export type NombreCocktail = 'Daiquiri' | 'adios';
+//export type NombreCocktail = 'Daiquiri' | 'Caipirissima' | 'Ron Collins';

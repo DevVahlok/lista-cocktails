@@ -5,4 +5,6 @@ export let listaIngredientes: { nombre: NombreIngrediente, isAlcohol: boolean, c
   { nombre: 'Jarabe de Azúcar', isAlcohol: false, checked: false },
   { nombre: 'Zumo de Lima', isAlcohol: false, checked: false },
   { nombre: 'Ron Blanco', isAlcohol: true, checked: false },
+  { nombre: 'Cucharada de Azúcar', isAlcohol: false, checked: false },
+  { nombre: 'Lima', isAlcohol: false, checked: false },
 ]

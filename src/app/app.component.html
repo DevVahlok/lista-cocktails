@@ -9,20 +9,21 @@
       <div>
         <h3>Alcoholes</h3>
         <ng-container *ngFor="let ingrediente of listaIngredientes">
-          <mat-checkbox [checked]="ingrediente.checked" *ngIf="ingrediente.isAlcohol"
-            (change)="seleccionIngrediente($event.checked,ingrediente.nombre)">{{ingrediente.nombre}}</mat-checkbox>
+
+          <mat-checkbox [(ngModel)]="ingrediente.checked" *ngIf="ingrediente.isAlcohol"
+            (change)="seleccionIngrediente()">{{ingrediente.nombre}}</mat-checkbox>
+
         </ng-container>
+
       </div>
 
       <div>
         <h3>Mezclas</h3>
         <ng-container *ngFor="let ingrediente of listaIngredientes">
-          <mat-checkbox [checked]="ingrediente.checked" *ngIf="!ingrediente.isAlcohol"
-            (change)="seleccionIngrediente($event.checked,ingrediente.nombre)">{{ingrediente.nombre}}</mat-checkbox>
+          <mat-checkbox [(ngModel)]="ingrediente.checked" *ngIf="!ingrediente.isAlcohol"
+            (change)="seleccionIngrediente()">{{ingrediente.nombre}}</mat-checkbox>
         </ng-container>
       </div>
-
-
 
     </div>
 

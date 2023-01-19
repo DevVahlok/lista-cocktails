@@ -3,4 +3,4 @@ export interface Ingrediente {
     cantidad: number
 }
 
-export type NombreIngrediente = 'Ron Blanco' | 'Zumo de Lima' | 'Jarabe de Azúcar';
+export type NombreIngrediente = 'Ron Blanco' | 'Zumo de Lima' | 'Jarabe de Azúcar' | 'Lima' | 'Cucharada de Azúcar';

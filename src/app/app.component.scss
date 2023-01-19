@@ -43,7 +43,7 @@
 
         .lista-cocktails {
             display: flex;
-            flex-flow: column nowrap;
+            flex-flow: row nowrap;
             justify-content: flex-start;
             margin: 0 auto;
 
@@ -52,6 +52,7 @@
                 flex-flow: column nowrap;
                 justify-content: flex-start;
                 width: fit-content;
+                margin-right: 50px;
 
                 h3 {
                     width: 100%;

@@ -11,18 +11,33 @@ import { listaIngredientes } from 'src/models/listaIngredientes';
 })
 export class AppComponent {
 
-  public listaCocktails: Cocktail[] = listaCocktails;
+  public listaCocktails: Cocktail[] = [];
   public listaIngredientes: { nombre: NombreIngrediente, isAlcohol: boolean, checked: boolean }[] = listaIngredientes;
-
-  ngOnInit() {
-    console.log('hola');
-  }
 
   abrirReceta(link: string) {
     window.open(link, "_blank");
   }
 
-  seleccionIngrediente(checked: boolean, nombre: string) {
-    console.log(checked, nombre);
+  seleccionIngrediente() {
+
+    this.listaCocktails = listaCocktails.filter(cocktail => {
+
+      let noInsertable = true;
+
+      cocktail.ingredientes.forEach(ingredienteCocktail => {
+
+        let encontrado = false;
+
+        this.listaIngredientes.forEach(ingrediente => {
+          if (ingrediente.checked && ingrediente.nombre === ingredienteCocktail.nombre) encontrado = true;
+        })
+
+        if (!encontrado) noInsertable = false;
+
+      })
+
+      return noInsertable;
+    })
+
   }
 }
