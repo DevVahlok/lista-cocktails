@@ -43,7 +43,7 @@
 
         .lista-cocktails {
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
             justify-content: flex-start;
             margin: 0 auto;
 
@@ -61,6 +61,7 @@
 
                 img {
                     width: 250px;
+                    height: 250px;
                     margin-bottom: 10px;
                 }
 

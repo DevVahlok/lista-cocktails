@@ -45,7 +45,7 @@
 
           <div class="ingredientes">
             <ng-container *ngFor="let ingrediente of cocktail.ingredientes">
-              <span>{{ingrediente.cantidad}} ml de {{ingrediente.nombre}}</span>
+              <span>{{ingrediente.cantidad}} {{ingrediente.isLiquid ? 'ml' : ''}} de {{ingrediente.nombre}}</span>
             </ng-container>
           </div>
 

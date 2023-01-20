@@ -14,6 +14,10 @@ export class AppComponent {
   public listaCocktails: Cocktail[] = [];
   public listaIngredientes: { nombre: NombreIngrediente, isAlcohol: boolean, checked: boolean }[] = listaIngredientes;
 
+  ngOnInit() {
+    this.listaIngredientes = this.listaIngredientes.sort((a, b) => (a.nombre > b.nombre) ? 1 : ((b.nombre > a.nombre) ? -1 : 0))
+  }
+
   abrirReceta(link: string) {
     window.open(link, "_blank");
   }
