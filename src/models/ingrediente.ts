@@ -1,7 +1,7 @@
 export interface Ingrediente {
     nombre: NombreIngrediente,
     cantidad: number | string | null,
-    isLiquid: boolean
+    unidad: string
 }
 
 export type NombreIngrediente =
@@ -16,7 +16,7 @@ export type NombreIngrediente =
     'Zumo de Piña' |
     'Jarabe de Miel' |
     'Coca-Cola' |
-    'Hoja de Menta' |
+    'Menta' |
     'Ginebra' |
     'Vodka' |
     'Granadina' |
@@ -39,5 +39,34 @@ export type NombreIngrediente =
     'Licor de Café' |
     'Leche Batida' |
     'Helado de Vainilla' |
-    'Red Bull'
+    'Red Bull' |
+    'Sour Mix' |
+    'Zumo de Pomelo' |
+    'Fanta de Limón' |
+    'Leche' |
+    'Canela' |
+    'Extracto de Vainilla' |
+    'Bicarbonato de Sodio' |
+    'Yema de Huevo' |
+    'Licor Grosella Negra' |
+    'Sidra de Manzana' |
+    'Vino Tinto' |
+    'Amargo de Angostura' |
+    'Cerveza de Jengibre' |
+    'Whisky' |
+    'Licor Triple Sec' |
+    'Campari' |
+    'Vermut Blanco' |
+    'Grand Marnier' |
+    'Jarabe de Sidra de Manzana' |
+    'Café' |
+    'Vino Blanco' |
+    'Absenta' |
+    'Albahaca' |
+    'Jarabe de Fresa' |
+    'Vermut Seco' |
+    'Puré de Melocotón' |
+    'Sirope de Horchata' |
+    'Aguamiel' |
+    'Fresa'
     ;

@@ -13,9 +13,10 @@ export class AppComponent {
 
   public listaCocktails: Cocktail[] = [];
   public listaIngredientes: { nombre: NombreIngrediente, isAlcohol: boolean, checked: boolean }[] = listaIngredientes;
+  public listaOriginalCocktails: Cocktail[] = listaCocktails;
 
   ngOnInit() {
-    this.listaIngredientes = this.listaIngredientes.sort((a, b) => (a.nombre > b.nombre) ? 1 : ((b.nombre > a.nombre) ? -1 : 0))
+    this.listaIngredientes = this.ordenarPorNombre(this.listaIngredientes);
   }
 
   abrirReceta(link: string) {
@@ -24,7 +25,7 @@ export class AppComponent {
 
   seleccionIngrediente() {
 
-    this.listaCocktails = listaCocktails.filter(cocktail => {
+    this.listaCocktails = this.ordenarPorNombre(listaCocktails.filter(cocktail => {
 
       let noInsertable = true;
 
@@ -41,7 +42,11 @@ export class AppComponent {
       })
 
       return noInsertable;
-    })
+    }))
 
+  }
+
+  ordenarPorNombre(arr: any[]) {
+    return arr.sort((a, b) => (a.nombre > b.nombre) ? 1 : ((b.nombre > a.nombre) ? -1 : 0))
   }
 }
