@@ -41,6 +41,8 @@ export class AppComponent {
 
       })
 
+      if (!noInsertable) console.log(cocktail);
+
       return noInsertable;
     }))
 

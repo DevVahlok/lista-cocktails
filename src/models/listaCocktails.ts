@@ -541,7 +541,7 @@ export let listaCocktails: Cocktail[] = [
     ]
   },
   {
-    nombre: 'Mojito de albahaca',
+    nombre: 'Mojito de Albahaca',
     link: 'https://coctelia.com/mojito-de-albahaca/',
     ingredientes: [
       { nombre: 'Ron Blanco', cantidad: 60, unidad: 'ml' },

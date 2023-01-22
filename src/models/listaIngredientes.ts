@@ -61,4 +61,9 @@ export let listaIngredientes: { nombre: NombreIngrediente, isAlcohol: boolean, c
   { nombre: 'Sirope de Horchata', isAlcohol: false, checked: false },
   { nombre: 'Aguamiel', isAlcohol: false, checked: false },
   { nombre: 'Fresa', isAlcohol: false, checked: false },
+  { nombre: 'Cerveza de Jengibre', isAlcohol: true, checked: false },
+  { nombre: 'Amargo de Angostura', isAlcohol: true, checked: false },
+  { nombre: 'Bicarbonato de Sodio', isAlcohol: false, checked: false },
+  { nombre: `Bailey's`, isAlcohol: true, checked: false },
+  { nombre: 'Leche Batida', isAlcohol: false, checked: false },
 ]
